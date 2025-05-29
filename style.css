@@ -1,26 +1,31 @@
-/* style.css */
 body {
+  font-family: sans-serif;
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #fdfdfd;
+  padding: 2rem;
+  background: #f7f7f7;
   color: #111;
 }
 
-.grid {
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 4rem;
+}
+
+.project {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid #ddd;
-}
-
-.project h2 {
-  font-size: 1rem;
-  margin: 0.5rem 0 0;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }

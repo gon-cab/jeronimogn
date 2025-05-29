@@ -1,0 +1,26 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #fdfdfd;
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+.project h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+}

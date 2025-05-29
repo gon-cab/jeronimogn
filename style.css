@@ -21,6 +21,8 @@ body, html {
   position: absolute;
   left: 0;
   top: 0;
+  width: max-content;
+  height: max-content;
   transition: transform 0.1s ease-out;
 }
 

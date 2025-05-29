@@ -4,7 +4,7 @@ const DATASET = "production";
 const API_VERSION = "2023-10-01";
 
 const query = encodeURIComponent('*[_type == "project"]{title, description, "imageUrl": image.asset->url}');
-const url = `https://${PROJECT_ID}.api.sanity.io/v${API_VERSION}/data/query/${DATASET}?query=${query}`;
+const url = `https://80k5e13a.api.sanity.io/v2025-05-29/data/query/production?query=&perspective=drafts`;
 
 fetch(url)
   .then(res => res.json())

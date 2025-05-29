@@ -3,10 +3,15 @@ const DATASET = "production";
 const API_VERSION = "2025-05-29";
 
 const QUERY = encodeURIComponent(`*[_type == "project"]{title, description, "imageUrl": image.asset->url}`);
-const url = '${PROJECT_ID}.api.sanity.io/v${API_VERSION}/data/query/${DATASET}?query=${QUERY}&perspective=published';
+const url = `https://${PROJECT_ID}.api.sanity.io/v${API_VERSION}/data/query/${DATASET}?query=${QUERY}&perspective=published`;
 
 fetch(url)
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+  })
   .then(({ result }) => {
     const container = document.getElementById("projects");
     if (!container) return;
@@ -22,3 +27,6 @@ fetch(url)
       container.appendChild(div);
     });
   })
+  .catch(err => {
+    console.error("Error al cargar proyectos:", err);
+  });

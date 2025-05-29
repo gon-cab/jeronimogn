@@ -1,4 +1,3 @@
-// script.js
 const PROJECT_ID = "80k5e13a";
 const DATASET = "production";
 const API_VERSION = "2025-05-29";
@@ -23,4 +22,3 @@ fetch(url)
       container.appendChild(div);
     });
   })
-  .catch(err => console.error("Error al cargar proyectos:", err));

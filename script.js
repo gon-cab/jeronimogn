@@ -14,9 +14,9 @@ fetch(url)
       const div = document.createElement("div");
       div.className = "project";
       div.innerHTML = `
-        <img src="${projectType.imageUrl}" alt="${projectType.title}" />
-        <h2>${projectType.title}</h2>
-        <p>${projectType.description}</p>
+        <img src="${project.imageUrl}" alt="${project.title}" />
+        <h2>${project.title}</h2>
+        <p>${project.description}</p>
       `;
       container.appendChild(div);
     });

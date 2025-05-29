@@ -6,7 +6,7 @@ const API_VERSION = "2023-10-01";
 const query = encodeURIComponent('*[_type == "project"]{title, description, "imageUrl": image.asset->url}');
 const url = `https://80k5e13a.api.sanity.io/v2025-05-29/data/query/production?query=&perspective=published`;
 
-fetch(url)
+fetch('https://80k5e13a.api.sanity.io/v2025-05-29/data/query/production?query=&perspective=published')
   .then(res => res.json())
   .then(({ result }) => {
     const container = document.getElementById("projects");

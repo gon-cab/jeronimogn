@@ -1,9 +1,9 @@
 // script.js
-const PROJECT_ID = "80k5e13a"; // Tu projectId real
+const PROJECT_ID = "80k5e13a";
 const DATASET = "production";
-const API_VERSION = "2023-10-01"; // Usa una versión estable (no futura)
-const QUERY = encodeURIComponent('*[_type == "project"]{title, description, "imageUrl": image.asset->url}');
+const API_VERSION = "2023-10-01";
 
+const QUERY = encodeURIComponent(`*[_type == "project"]{title, description, "imageUrl": image.asset->url}`);
 const url = `https://${PROJECT_ID}.api.sanity.io/v${API_VERSION}/data/query/${DATASET}?query=${QUERY}&perspective=published`;
 
 fetch(url)
